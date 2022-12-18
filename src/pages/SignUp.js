@@ -41,7 +41,7 @@ const Form = props => {
           
             console.log(res.user)
             localStorage.setItem('token', res.user.accessToken)
-          navigate('/home',{ state: { email : res.user.email } })
+          navigate('/teams',{ state: { email : res.user.email } })
           })
         .catch(err => {
           setErrorMessage(err.message)

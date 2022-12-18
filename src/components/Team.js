@@ -1,13 +1,26 @@
 import React from 'react';
 
+import { useNavigate } from "react-router-dom";
+
 function Team(props) {
+  const navigate = useNavigate()
+  const getplayers =()=>{
+    navigate('/players',{ state: { team:props.name } })
+  }
+
   return (
-    <div className="team">
+    <div className="team-card" onClick={getplayers}>
       <h2>{props.name}</h2>
-      <p>Captain: {props.captain}</p>
-      <p>Coach: {props.coach}</p>
-      <p>Sponsor: {props.sponsor}</p>
-      <p>Continent: {props.continent}</p>
+      <h3>{props.captain}</h3>
+      <p>
+        <strong>Coach:</strong> {props.coach}
+      </p>
+      <p>
+        <strong>Sponsor:</strong> {props.sponsor}
+      </p>
+      <p>
+        <strong>Continent:</strong> {props.continent}
+      </p>
     </div>
   );
 }

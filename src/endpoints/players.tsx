@@ -5,9 +5,9 @@ import { Player } from "./types";
 
 const collection = "Players";
 
-const getPlayers = async () => {
+const getPlayers = async (team:string) => {
   try {
-    return await getData(collection);
+    return await getData(collection,team);
   } catch (e) {
     return e;
   }

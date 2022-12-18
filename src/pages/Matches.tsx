@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Match from '../components/Match';
 import '../css/matches.css'
+import '../css/form.css'
 import {Match as MatchT} from '../endpoints/types'
 import {getMatches,addMatches} from '../endpoints/matches'
 
@@ -38,7 +39,62 @@ function Matches() {
   }
   return (
     <div className='matches'>
-      <form onSubmit={handleSubmit}>
+      <form className="cool-form"  onSubmit={handleSubmit}>
+    <label>
+    Team A:
+      <input
+        type="text"
+        name="Team A"
+        value={newMatch.TeamA}
+        onChange={(event) => setNewMatch({ ...newMatch, TeamA: event.target.value })}
+      />
+    </label>
+    
+    <label>
+    Team B:
+      <input
+        type="text"
+        name="Team B"
+        value={newMatch.TeamB}
+        onChange={(event) => setNewMatch({ ...newMatch, TeamB: event.target.value })}
+      />
+    </label>
+
+    <br />
+    <label>
+    Date:
+      <input
+        type="Date"
+        name="Date"
+        value={newMatch.Date}
+        onChange={(event) => setNewMatch({ ...newMatch, Date: event.target.value })}
+      />
+    </label>
+    <br />
+    <label>
+    Winner:
+      <input
+        type="text"
+        name="Winner"
+        value={newMatch.Winner}
+        onChange={(event) => setNewMatch({ ...newMatch, Winner: event.target.value })}
+      />
+    </label>
+
+    <label>
+    Points:
+      <input
+        type="text"
+        name="Points"
+        value={newMatch.Points}
+        onChange={(event) => setNewMatch({ ...newMatch, Points: event.target.value })}
+      />
+    </label>
+    <br />
+    <button type="submit">Add Match</button>
+  </form>
+  
+      {/* <form onSubmit={handleSubmit}>
       <label>
         Team A:
         <input type="text" value={newMatch.TeamA} onChange={(event) => setNewMatch({ ...newMatch, TeamA: event.target.value })} />
@@ -65,7 +121,7 @@ function Matches() {
       </label>
       <br />
       <button type="submit">Add</button>
-    </form>
+    </form> */}
       <ul>
       {matches.map((match, index) => (
           <li key={index}>

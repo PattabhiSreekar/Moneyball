@@ -5,6 +5,7 @@ import { Team as TeamT } from "../endpoints/types";
 import '../css/team.css'
 import { addTeams, getTeams } from "../endpoints/teams";
 import { addPlayers } from "../endpoints/players";
+import Toolbar from "../components/Toolbar";
 
 function Teams() {
 
@@ -46,6 +47,7 @@ function Teams() {
 
   return (
     <div className="teams">
+      
       <form onSubmit={handleSubmit}>
         <label>
           Team name:
@@ -102,7 +104,7 @@ function Teams() {
           />
         </label>
         <br />
-        <button type="submit">Add</button>
+        <button type="submit">Add Team  </button>
       </form>
       <ul>
         {teams.map((team, index) => (

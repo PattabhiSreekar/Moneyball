@@ -2,7 +2,7 @@ import React from 'react';
 
 function Match(props) {
   return (
-    <div className="match">
+    <div className="team-card">
       <h2>{props.TeamA} vs. {props.TeamB}</h2>
       <p>Date: {props.Date}</p>
       <p>Winner: {props.Winner}</p>

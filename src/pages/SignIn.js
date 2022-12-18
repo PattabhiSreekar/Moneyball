@@ -42,7 +42,7 @@ const Form = props => {
         .then((userCredential) => {
           console.log(userCredential.user)
           localStorage.setItem('token', userCredential.user.accessToken)
-          navigate('/home',{ state: { email : userCredential.user.email } })
+          navigate('/teams',{ state: { email : userCredential.user.email } })
         })
         .catch(err => {
           console.log(err.message)

@@ -17,7 +17,8 @@ type Match = {
 type Player = {
     Name: String,
     Team: String,
-    JerseyNo: Number
+    JerseyNo: String
+    Goals: String
 };
 
 export type {Match, Team, Player}
