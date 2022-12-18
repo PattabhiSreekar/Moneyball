@@ -1,0 +1,29 @@
+/* matches.css */
+
+.matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .matches ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .matches li {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  .matches h2 {
+    margin: 0;
+  }
+  
+  .matches p {
+    margin: 0.5em 0;
+    font-size: 0.8em;
+  }
+  

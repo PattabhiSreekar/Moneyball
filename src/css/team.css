@@ -1,0 +1,30 @@
+/* teams.css */
+
+.teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .teams form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .teams input {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  
+  .teams ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .teams li {
+    margin: 1em 0;
+    padding: 0
+  }  
